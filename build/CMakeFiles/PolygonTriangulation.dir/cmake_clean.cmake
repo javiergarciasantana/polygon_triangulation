@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PolygonTriangulation.dir/src/main.cc.o"
   "CMakeFiles/PolygonTriangulation.dir/src/main.cc.o.d"
+  "CMakeFiles/PolygonTriangulation.dir/src/polygon.cc.o"
+  "CMakeFiles/PolygonTriangulation.dir/src/polygon.cc.o.d"
   "PolygonTriangulation"
   "PolygonTriangulation.pdb"
 )

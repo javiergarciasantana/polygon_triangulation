@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/PolygonTriangulation.dir/src/main.cc.o -o PolygonTriangulation
+/Library/Developer/CommandLineTools/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/PolygonTriangulation.dir/src/polygon.cc.o CMakeFiles/PolygonTriangulation.dir/src/main.cc.o -o PolygonTriangulation  /usr/local/lib/libglfw.3.4.dylib -framework OpenGL

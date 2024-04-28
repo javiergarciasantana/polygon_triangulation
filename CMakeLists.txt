@@ -25,7 +25,12 @@ project(ULL_CARCEL                # Mandatory
     DESCRIPTION "Saquenme de la ull"
     LANGUAGES CXX)
 
+# Find GLFW package
+find_package(glfw3 REQUIRED)
 
+# Find OpenGL package
+find_package(OpenGL REQUIRED)
+    
 # specify the C++ standard
 set(CMAKE_CXX_STANDARD 17) 						# Use c++17
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -41,6 +46,11 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 # tell cmake where to look for *.h files
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
+
 add_executable(PolygonTriangulation
     src/polygon.h
+    src/polygon.cc
     src/main.cc )
+
+# Link against GLFW and OpenGL libraries
+target_link_libraries(PolygonTriangulation glfw OpenGL::GL)

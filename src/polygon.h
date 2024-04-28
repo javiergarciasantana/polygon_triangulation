@@ -1,6 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <GLFW/glfw3.h>
+#include <cmath>
+#include <fstream>
+#include <sstream>
 
 #ifndef POLYGON_H
 #define POLYGON_H
@@ -54,12 +57,6 @@ class Polygon {
     edges_.push_back(e2);
   }
 
-  void printVertices() {
-    for (const auto& vertex : vertices_) {
-      std::cout << "(" << vertex->x << ", " << vertex->y << ")" << std::endl;
-    }
-  }
-
   std::vector<Vertex*> getVertices() {
     return vertices_;
   }
@@ -68,50 +65,10 @@ class Polygon {
     return edges_;
   }
 
-  void printEdges() {
-    for (const auto& edge : edges_) {
-      std::cout << "(" << edge->origin->x << ", " << edge->origin->y << ") -> ("
-                << edge->twin->origin->x << ", " << edge->twin->origin->y << ")" << std::endl;
-    }
-  }
-
-  void drawPolygon() {
-    GLFWwindow* window;
-
-    /* Initialize the library */
-    if (!glfwInit())
-      return;
-
-    /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(640, 480, "Simple Polygon", NULL, NULL);
-    if (!window) {
-      glfwTerminate();
-      return;
-    }
-
-    /* Make the window's context current */
-    glfwMakeContextCurrent(window);
-
-    /* Loop until the user closes the window */
-    while (!glfwWindowShouldClose(window)) {
-      glClear(GL_COLOR_BUFFER_BIT);
-
-      // Draw polygon
-      glBegin(GL_LINE_LOOP);
-      for (const auto& vertex : vertices) {
-        glVertex2d(vertex->x, vertex->y);
-      }
-      glEnd();
-
-      /* Swap front and back buffers */
-      glfwSwapBuffers(window);
-
-      /* Poll for and process events */
-      glfwPollEvents();
-    }
-
-    glfwTerminate();
-  }
+  void Read(std::ifstream&, const std::string&);
+  void printVertices();
+  void printEdges();
+  void drawPolygon();
 
  private:
   std::vector<Vertex*> vertices_;

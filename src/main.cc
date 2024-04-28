@@ -2,27 +2,23 @@
 
 #include "polygon.h"
 
-int main() {
-    Polygon polygon;
+int main(int argc, char* argv[]) {
 
-    // Add vertices
-    polygon.addVertex(0, 0);
-    polygon.addVertex(1, 0);
-    polygon.addVertex(1, 1);
-    polygon.addVertex(0, 1);
+  Polygon polygon;
 
-    // Add edges
-    polygon.addEdge(polygon.getVertices()[0], polygon.getVertices()[1]);
-    polygon.addEdge(polygon.getVertices()[1], polygon.getVertices()[2]);
-    polygon.addEdge(polygon.getVertices()[2], polygon.getVertices()[3]);
-    polygon.addEdge(polygon.getVertices()[3], polygon.getVertices()[0]);
+  std::ifstream input;
 
-    // Print vertices and edges
+    polygon.Read(input, argv[1]);
+
+    // Print vertices, edges and the polygon itself
     std::cout << "Vertices:" << std::endl;
     polygon.printVertices();
 
     std::cout << "\nEdges:" << std::endl;
     polygon.printEdges();
 
+    polygon.drawPolygon();
+
     return 0;
+
 }

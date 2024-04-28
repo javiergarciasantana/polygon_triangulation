@@ -1,5 +1,6 @@
-CMakeFiles/PolygonTriangulation.dir/src/main.cc.o: \
-  /Users/javiersantana/VU_Files/Randomized\ Algorithms/polygon_triangulation/src/main.cc \
+CMakeFiles/PolygonTriangulation.dir/src/polygon.cc.o: \
+  /Users/javiersantana/VU_Files/Randomized\ Algorithms/polygon_triangulation/src/polygon.cc \
+  /Users/javiersantana/VU_Files/Randomized\ Algorithms/polygon_triangulation/src/polygon.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/ios \
@@ -156,7 +157,6 @@ CMakeFiles/PolygonTriangulation.dir/src/main.cc.o: \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__bit_reference \
-  /Users/javiersantana/VU_Files/Randomized\ Algorithms/polygon_triangulation/src/polygon.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__split_buffer \
   /usr/local/include/GLFW/glfw3.h \

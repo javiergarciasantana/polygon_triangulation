@@ -153,6 +153,30 @@ src/main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PolygonTriangulation.dir/build.make CMakeFiles/PolygonTriangulation.dir/src/main.cc.s
 .PHONY : src/main.cc.s
 
+src/polygon.o: src/polygon.cc.o
+.PHONY : src/polygon.o
+
+# target to build an object file
+src/polygon.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PolygonTriangulation.dir/build.make CMakeFiles/PolygonTriangulation.dir/src/polygon.cc.o
+.PHONY : src/polygon.cc.o
+
+src/polygon.i: src/polygon.cc.i
+.PHONY : src/polygon.i
+
+# target to preprocess a source file
+src/polygon.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PolygonTriangulation.dir/build.make CMakeFiles/PolygonTriangulation.dir/src/polygon.cc.i
+.PHONY : src/polygon.cc.i
+
+src/polygon.s: src/polygon.cc.s
+.PHONY : src/polygon.s
+
+# target to generate assembly for a file
+src/polygon.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PolygonTriangulation.dir/build.make CMakeFiles/PolygonTriangulation.dir/src/polygon.cc.s
+.PHONY : src/polygon.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/polygon.o"
+	@echo "... src/polygon.i"
+	@echo "... src/polygon.s"
 .PHONY : help
 
 

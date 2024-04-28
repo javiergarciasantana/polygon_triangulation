@@ -207,3 +207,42 @@ events:
       LTO support using: LLVM version 10.0.0, (clang-1000.10.44.4) (static support for 21, runtime is 21)
       TAPI support using: Apple TAPI version 10.0.0 (tapi-1000.10.8)
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/Cellar/cmake/3.29.2/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/Cellar/cmake/3.29.2/share/cmake/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/local/Cellar/cmake/3.29.2/share/cmake/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
+      - "/usr/local/Cellar/cmake/3.29.2/share/cmake/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/usr/local/Cellar/cmake/3.29.2/share/cmake/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/usr/local/lib/cmake/glfw3/glfw3Config.cmake:2 (find_dependency)"
+      - "CMakeLists.txt:29 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/Users/javiersantana/VU_Files/Randomized Algorithms/polygon_triangulation/build/CMakeFiles/CMakeScratch/TryCompile-adGvBv"
+      binary: "/Users/javiersantana/VU_Files/Randomized Algorithms/polygon_triangulation/build/CMakeFiles/CMakeScratch/TryCompile-adGvBv"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/javiersantana/VU_Files/Randomized Algorithms/polygon_triangulation/build/CMakeFiles/CMakeScratch/TryCompile-adGvBv'
+        
+        Run Build Command(s): /usr/local/Cellar/cmake/3.29.2/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1450b/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_1450b.dir/build.make CMakeFiles/cmTC_1450b.dir/build
+        Building CXX object CMakeFiles/cmTC_1450b.dir/src.cxx.o
+        /Library/Developer/CommandLineTools/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -MD -MT CMakeFiles/cmTC_1450b.dir/src.cxx.o -MF CMakeFiles/cmTC_1450b.dir/src.cxx.o.d -o CMakeFiles/cmTC_1450b.dir/src.cxx.o -c "/Users/javiersantana/VU_Files/Randomized Algorithms/polygon_triangulation/build/CMakeFiles/CMakeScratch/TryCompile-adGvBv/src.cxx"
+        Linking CXX executable cmTC_1450b
+        /usr/local/Cellar/cmake/3.29.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1450b.dir/link.txt --verbose=1
+        /Library/Developer/CommandLineTools/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_1450b.dir/src.cxx.o -o cmTC_1450b
+        
+      exitCode: 0
+...
