@@ -120,12 +120,12 @@ void Polygon::drawPolygon() {
         glColor3f(1.0f, 0.0f, 0.0f); // Set color to red for vertices
         for (const auto& vertex : vertices_) {
             glBegin(GL_TRIANGLE_FAN);
-            glVertex2d(vertex->x, vertex->y); // Center of circle
+            glVertex2d(vertex->x/8, vertex->y/8); // Center of circle
             for (int i = 0; i <= 100; i++) { // Loop to draw circle
                 double angle = 2.0 * M_PI * i / 100;
-                double dx = 0.05 * cos(angle); // Radius of circle
-                double dy = 0.05 * sin(angle);
-                glVertex2d(vertex->x + dx, vertex->y + dy);
+                double dx = 0.025 * cos(angle); // Radius of circle
+                double dy = 0.025 * sin(angle);
+                glVertex2d((vertex->x/8)+ dx, (vertex->y/8) + dy);
             }
             glEnd();
         }
